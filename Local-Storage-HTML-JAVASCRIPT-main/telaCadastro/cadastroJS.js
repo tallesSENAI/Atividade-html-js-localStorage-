@@ -4,6 +4,7 @@ const dataNascimentoInput = document.getElementById('dataNascimentoCadastro');
 const emailInput = document.getElementById('emailCadastro');
 const senhaInput = document.getElementById('senhaCadastro');
 const tabelaCadastroDiv = document.getElementById('tabelaCadastro');
+const generoCadastro = document.getElementById('generoCadastro');
 
 
 function cadastrarUsuario(){
@@ -18,6 +19,7 @@ function cadastrarUsuario(){
     pessoa.data = dataNascimentoInput.value;
     pessoa.email = emailInput.value;
     pessoa.senha = senhaInput.value;
+    pessoa.genero = generoCadastro.value;
 
     localStorage.setItem("pessoasCadastro", JSON.stringify(pessoasCadastradas)); //JSON.stringfy pega o objeto e transforma em texto
 
@@ -29,12 +31,11 @@ function cadastrarUsuario(){
 
 function pegaPessoasCadastradas(){
 
-let pessoasCadastradas = JSON.parse(localStorage.getItem("pessoasCadastro"));//coloca entre "" o nome da chave que você quer pegar
-
-    if(pessoasCadastradas === null){
-        pessoasCadastradas = [];
+    let pessoasCadastradas = JSON.parse(localStorage.getItem("pessoasCadastro"));//coloca entre "" o nome da chave que você quer pegar
+    
+        if(pessoasCadastradas === null){
+            pessoasCadastradas = [];
+        }
+    
+        return pessoasCadastradas;
     }
-
-    return pessoasCadastradas;
-}
-

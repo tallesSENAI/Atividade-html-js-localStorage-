@@ -3,38 +3,51 @@
         .textoBranco{
             display: block;
             color: black;
+            margin-right: 30%;
             font-size: 20;
             text-align: left;
             background-color: greenyellow;
         }
         .botaoRealizaCadastro {
             display: inline-block;
+            border: 3px black solid;
+            text-align: center;
+            text-decoration: solid;
+            color: black;
             margin-left: 38%; /* centraliza o botão horizontalmente */
             background-color: green;
             width: 180px; /* define uma largura fixa para o botão */
-            height: 40px; /* define uma altura fixa para o botão */
+            height: 20px; /* define uma altura fixa para o botão */
         }
         .botaoConsultaCadastro {
-            display: inline-block; /* centraliza o botão horizontalmente */
+            display: inline-block;
+            border: 3px black solid;
+            text-align: center;
+            text-decoration: solid;
+            color: black;
             background-color: orange;
             width: 180px; /* define uma largura fixa para o botão */
-            height: 40px; /* define uma altura fixa para o botão */
+            height: 20px; /* define uma altura fixa para o botão */
         }
     </style>
-    <head>
+    <header>
         <title>Tela Inicial</title>
-        <h1 style="text-align: center; color: white;">Tela Inicial</h1>
-        <h4 style="text-align: center; color: white">Seja bem vindo(a)! Qual das operações abaixo desejas realizar ?</h4>
-        <button class="botaoRealizaCadastro" >Realizar cadastro(s)</button>
+        <h1 style="text-align: center; color: white; text-decoration: underline;">Tela Inicial</h1>
+        <h4 style="text-align: center; color: white">Seja bem vindo(a)! Qual das operações abaixo desejas usar ?</h4>
 
-        <button class="botaoConsultaCadastro">Consultar cadastro(s)</button>
+        <a class="botaoRealizaCadastro" href="../telaCadastro/cadastroUsuario.html">Realizar cadastro(s)</a>
 
-    </head>
+        <a class="botaoConsultaCadastro" href="../consultaCadastro/consulta.html">Consultar cadastro(s)</a>
+
+    </header>
 
     <body style="background-color: black;">
         <p class="textoBranco">Este site foi criado com o intuito de teste para o curso de Desenvolvimento de Sistemas
-            realizado na instituição SENAI de Jaraguá do Sul.
-
+            realizado na instituição SENAI de Jaraguá do Sul. <br>
+            Ele foi construído com a junção da linguagem HTML, estilização do site em
+            CSS, JavaScript para a parte de lógica e o uso do Local Storage para armazenamento dos dados cadastrados.<br>
+            O site conta com as funções de cadastrar um usuário e consultar os usuários já cadastrados juntamente com botões
+            para navegar entre as páginas.
         </p>
         
         <footer style="background-color: grey; border: 5px white solid;">

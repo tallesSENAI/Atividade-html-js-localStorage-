@@ -1,24 +1,64 @@
 <html>
-<head>
+    <style>
+        .botaoVoltar{
+            display: block;
+            border: 3px black solid;
+            text-align: center;
+            text-decoration: solid;
+            margin-left: 80%;
+            color: black;
+            background-color: orangered;
+            width: 180px; /* define uma largura fixa para o botão */
+            height: 20px; /* define uma altura fixa para o botão */
+        }
+        .botaoConsulta{
+            display: inline-block;
+            border: 3px black solid;
+            text-align: center;
+            text-decoration: solid;
+            margin-top: 1%;
+            margin-left:80%;
+            color: black;
+            background-color: orangered;
+            width: 180px; /* define uma largura fixa para o botão */
+            height: 20px; /* define uma altura fixa para o botão */
+        }
+    </style>
+<header>
 
-    <title>Cadastro Usuário</title>
+    <title>Realizar cadastro</title>
 
-</head>
-<body onload=""> <!--ONLOAD para rodar algo assim que a página carregar-->
+    <a class="botaoVoltar" href="../telaApresentacao/apresentacao.html">Página Inicial</a>
+    <a class="botaoConsulta" href="../consultaCadastro/consulta.html">Página de Consulta</a>
+
+    
+</header>
+<body onload="" style="background-color: grey;"> <!--ONLOAD para rodar algo assim que a página carregar-->
     
     <form onsubmit="return cadastrarUsuario()">
+        <div style="text-decoration: underline; color: white; text-align: center">Formulário para cadastro de usuário</div><br>
 
-        <input required type="text" placeholder="Nome completo" id="nomeCompletoCadastro"/> <!--PLACEHOLDER: nome que aparece enquanto o usuário 
+        <input required minlength="3" maxlength="150" type="text" placeholder="Nome completo" id="nomeCompletoCadastro" style="margin-left: 44%;"/> <!--PLACEHOLDER: nome que aparece enquanto o usuário 
                                                         não digita nada no campo de texto-->
         <br>
-        <input required type="date" placeholder="Data de nascimento" id="dataNascimentoCadastro"/> <!--placeholder não aparece pois a tag "date" 
+        <input required type="date" placeholder="Data de nascimento" id="dataNascimentoCadastro" style="margin-left: 46%;"/> <!--placeholder não aparece pois a tag "date" 
                                                         ja possui um placeholder pré-definido-->
         <br>
 
-        <input required type="email" placeholder="Email" id="emailCadastro"/>
+        <input required type="text" placeholder="CPF" id="cpfCadastro" style="margin-left: 44%;"/>
         <br>
 
-        <input required minlength="3" maxlength="10" type="password" placeholder="Senha" id="senhaCadastro"/>
+        <select id="generoCadastro"> <!--PARA SELEÇÃO DE INFORMAÇÕES/ESCOLHA DE UMA OPÇÃO-->
+            <option>Gênero</option>
+            <option>Masculino</option>
+            <option>Feminino</option>
+            <option>Outros</option>
+        </select>
+
+        <input required type="email" placeholder="Email" id="emailCadastro" style="margin-left: 44%;"/>
+        <br>
+
+        <input required  type="password" placeholder="Senha" id="senhaCadastro" style="margin-left: 44%;"/>
         <!--REQUIRED obriga o usuário a preencher o campo para continuar com o cadastro 
             (serve para todos os tipos de INPUT (text, number, file, email, data, etc...))-->
         <!--MINLENGTH dá um MÍNIMO de CARACTERES que o campo deve ter para continuar com o cadastro-->
@@ -28,12 +68,15 @@
         <!--MAX dá um MÁXIMO de NÚMEROS que o campo deve ter para continuar com o cadastro-->
         <br>
 
-    <button>Cadastrar</button>
+    <button style="margin-left: 48%;">Cadastrar</button>
     </form>
     <!-- "onclick" é uma função, esta função ao ser ativada ira executar a função que esta dentro do "cadastro.JS" -->
 
-    <div id="tabelaCadastro"></div>
+    <footer style="background-color: grey; border: 5px white solid;">
+        <a href="https://github.com/tallesSENAI" style="color: black;">MY GITHUB PROFILE</a>
+    </footer>
 
+    <div id="tabelaCadastro"></div>
     <script src="cadastroJS.js"></script><!--IMPORTAR OS ARQUIVOS JAVASCRIPT SEMPRE NO FINAL DO BODY-->
 
 </body>

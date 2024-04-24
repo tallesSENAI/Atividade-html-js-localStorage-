@@ -1,12 +1,48 @@
 <html>
-    <head>
-        <title>Consulta de Cadastros</title>
+    <style>
+        .botaoVoltar{
+            display: inline-block;
+            border: 3px black solid;
+            text-align: center;
+            margin-left: 80%;
+            text-decoration: solid;
+            color: black;
+            background-color: orangered;
+            width: 180px; /* define uma largura fixa para o botão */
+            height: 20px; /* define uma altura fixa para o botão */
+        }
+        .botaoCadastro{
+            display: inline-block;
+            border: 3px black solid;
+            text-align: center;
+            margin-top: 1%;
+            margin-left:80%;
+            text-decoration: solid;
+            color: black;
+            background-color: orangered;
+            width: 180px; /* define uma largura fixa para o botão */
+            height: 20px; /* define uma altura fixa para o botão */
+        }
+        body{
+            text-align: center;
+        }
+    </style>
+        <header>
 
-    </head>
-    <body>
-        <h1 style="text-align: center; text-decoration: underline;">Consulta de Cadastro de Usuários</h1>
+            <title>Consulta de Cadastros</title>
 
+            <a class="botaoVoltar" href="../telaApresentacao/apresentacao.html">Página Inicial</a>
+            <a class="botaoCadastro" href="../telaCadastro/cadastroUsuario.html">Página de Cadastro</a>
 
+        </header>
+    <body style="background-color: grey;">
+        <h1 style="text-align: center; text-decoration: underline; color: whitesmoke;">Consulta de Cadastro de Usuários</h1>
+
+        <footer style="background-color: grey; border: 5px white solid; text-align: left;">
+            <a href="https://github.com/tallesSENAI" style="color: black;">MY GITHUB PROFILE</a>
+        </footer>
+
+        <div id="tabelaCadastro"></div>
         <script src="consulta.js"></script><!--IMPORTAR OS ARQUIVOS JAVASCRIPT SEMPRE NO FINAL DO BODY-->
     </body>
 </html>
