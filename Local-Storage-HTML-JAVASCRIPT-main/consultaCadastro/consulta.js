@@ -8,6 +8,13 @@ const generoCadastro = document.getElementById('generoCadastro');
 const fotoCadastro = document.getElementById('fotoCadastro');
 const tabelaCadastroDiv = document.getElementById('tabelaCadastro');
 
+function deletarUsuario(email) {
+    let pessoasCadastradas = pegaPessoasCadastradas();
+    pessoasCadastradas = pessoasCadastradas.filter(pessoa => pessoa.email !== email);
+    localStorage.setItem("pessoasCadastro", JSON.stringify(pessoasCadastradas));
+    location.reload(); // Recarrega a página para atualizar a tabela
+}
+
 //este bloco de codigo vai mostrando na tela cada vez que um novo usuário é cadastrado
 const pessoas = pegaPessoasCadastradas();
 for(const pessoa of pessoas) {
@@ -32,6 +39,9 @@ function mostraPessoa(batata){
     tabelaCadastroDiv.innerHTML += `<span style="color: Black; background-color: White;">Foto de perfil:</span>
     <img src="${batata.foto}" width="100" height="80" style="border-radius: 50%; border: 3px solid white; margin-right: 7%" /><br>`;
 
+    tabelaCadastroDiv.innerHTML += `
+        <button onclick="deletarUsuario('${batata.email}')">Deletar</button>
+        <button onclick="alterarUsuario('${batata.email}')">Alterar</button>`;
     tabelaCadastroDiv.innerHTML += `<p></p>`
 
 }
