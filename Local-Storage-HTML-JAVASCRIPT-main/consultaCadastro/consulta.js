@@ -30,12 +30,12 @@ function mostraPessoa(batata){
     // console.log(senhaInput.value); 
     // console.log(tabelaCadastroDiv); /* "value" não é usado quando se há uma classe DIV, ele é usado apenas para INPUT, TEXTAREA e SELECT */
 
-    tabelaCadastroDiv.innerHTML += `<span style="color: Black; background-Color: White;"> Nome: ${batata.nome}</span><br>`;
-    tabelaCadastroDiv.innerHTML += `<span style="color: Black; background-Color: White;"> Data de Nascimento: ${batata.data} </span><br>`;
-    tabelaCadastroDiv.innerHTML += `<span style="color: Black; background-Color: White;"> CPF: ${batata.cpf} </span><br>`;
-    tabelaCadastroDiv.innerHTML += `<span style="color: Black; background-Color: White;"> Genero: ${batata.genero} </span><br>`;
-    tabelaCadastroDiv.innerHTML += `<span style="color: Black; background-Color: White;"> Email: ${batata.email} </span><br>`;
-    tabelaCadastroDiv.innerHTML += `<span style="color: Black; background-Color: White;"> Senha: ${batata.senha} </span><br>`;
+    tabelaCadastroDiv.innerHTML += `<span style="color: Black; background-Color: White; border: 1px black solid;"> Nome: ${batata.nome}</span><br>`;
+    tabelaCadastroDiv.innerHTML += `<span style="color: Black; background-Color: Grey; border: 1px black solid;"> Data de Nascimento: ${batata.data} </span><br>`;
+    tabelaCadastroDiv.innerHTML += `<span style="color: Black; background-Color: White; border: 1px black solid;"> CPF: ${batata.cpf} </span><br>`;
+    tabelaCadastroDiv.innerHTML += `<span style="color: Black; background-Color: Grey; border: 1px black solid;"> Genero: ${batata.genero} </span><br>`;
+    tabelaCadastroDiv.innerHTML += `<span style="color: Black; background-Color: White; border: 1px black solid;"> Email: ${batata.email} </span><br>`;
+    tabelaCadastroDiv.innerHTML += `<span style="color: Black; background-Color: Grey; border: 1px black solid;"> Senha: ${batata.senha} </span><br>`;
     tabelaCadastroDiv.innerHTML += `<span style="color: Black; background-color: White;">Foto de perfil:</span>
     <img src="${batata.foto}" width="100" height="80" style="border-radius: 50%; border: 3px solid white; margin-right: 7%" /><br>`;
 
